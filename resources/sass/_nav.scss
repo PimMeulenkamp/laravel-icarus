@@ -1,16 +1,47 @@
+@import "variables";
+@import "typography";
+
+.navbar-brand {
+    font-family: $lato;
+    font-size: 1.2rem;
+}
 
 .nav-item {
 
     //active nav item
     &.active {
         .nav-link {
-
+            &::before {
+                width: 78%;
+            }
         }
     }
 
     //just a nav item
     .nav-link {
-        font-size: 1.2rem;
+        color: $brand-blue;
+        font-family: $lato;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        position: relative;
 
+        &::before {
+            content: "";
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background-color: $brand-blue;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: .2em;
+            transition: width .2s ease-in-out;
+        }
+
+        &:hover {
+            &::before {
+                width: 78%;
+            }
+        }
     }
 }
