@@ -13,11 +13,6 @@
 
 
                 @if(auth()->check())
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->path() == "account" ? 'active' : '' }}"
-                           href="/account">Account</a>
-                    </li>
-
                     <li class="nav-item dropdown">
 
                         <a class="nav-link dropdown-toggle" href="#" id="account" role="button"
