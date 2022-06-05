@@ -1,0 +1,8 @@
+@import "~bootstrap/scss/mixins";
+
+.acc-card {
+    @include media-breakpoint-up(md) {
+        min-width: 580px;
+    }
+    box-shadow: #b7b7b9 3px 4px 20px;
+}
