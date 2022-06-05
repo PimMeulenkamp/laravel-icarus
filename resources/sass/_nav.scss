@@ -1,0 +1,16 @@
+
+.nav-item {
+
+    //active nav item
+    &.active {
+        .nav-link {
+
+        }
+    }
+
+    //just a nav item
+    .nav-link {
+        font-size: 1.2rem;
+
+    }
+}
