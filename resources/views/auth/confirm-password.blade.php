@@ -1,30 +1,31 @@
 <x-layout-default>
-    <x-jet-authentication-card>
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
+    <x-auther>
+        <div class="card">
+            <div class="mb-4 alert alert-info">
+                {{ __('Voor dat je verder gaat moet je eerst je wachtwoord opnieuw invullen') }}
+            </div>
+            <h4 class="card-header">
+                Bevestig wachtwoord
+            </h4>
+
+            <x-jet-validation-errors class="mb-4"/>
+            <div class="card-body">
+                <form method="POST" action="{{ route('password.confirm') }}">
+                    @csrf
+
+                    <div>
+                        <label for="password">{{ __('Password') }}</label>
+                        <input id="password" class="block mt-1 w-full" type="password" name="password" required
+                               autocomplete="current-password" autofocus/>
+                    </div>
+
+                    <div class="d-flex justify-content-end mt-4">
+                        <button class="btn btn-danger">
+                            {{ __('Confirm') }}
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <h4 class="card-header">
-            Bevestig wachtwoord
-        </h4>
-
-        <x-jet-validation-errors class="mb-4"/>
-        <div class="card-body">
-            <form method="POST" action="{{ route('password.confirm') }}">
-                @csrf
-
-                <div>
-                    <x-jet-label for="password" value="{{ __('Password') }}"/>
-                    <x-jet-input id="password" class="block mt-1 w-full" type="password" name="password" required
-                                 autocomplete="current-password" autofocus/>
-                </div>
-
-                <div class="flex justify-end mt-4">
-                    <x-jet-button class="ml-4">
-                        {{ __('Confirm') }}
-                    </x-jet-button>
-                </div>
-            </form>
-        </div>
-
-    </x-jet-authentication-card>
+    </x-auther>
 </x-layout-default>

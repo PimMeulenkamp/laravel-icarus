@@ -20,7 +20,7 @@
     <x-navbar></x-navbar>
     {{ $slot }}
 </main>
-<h1>Footer</h1>
+<x-footer></x-footer>
 
 <script src="{{ mix('js/app.js') }}" defer></script>
 </body>

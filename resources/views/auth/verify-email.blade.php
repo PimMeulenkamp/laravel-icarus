@@ -1,5 +1,6 @@
 <x-layout-default>
-        <x-jet-authentication-card>
+    <x-auther>
+        <div class="card">
             <h4 class="card-header">Bevestig uw email</h4>
 
             <div class="card-body">
@@ -8,7 +9,7 @@
                 </p>
 
                 @if (session('status') == 'verification-link-sent')
-                    <div class="mb-4 font-medium text-sm text-green-600">
+                    <div class="mb-4 alert alert-success">
                         {{ __('A new verification link has been sent to the email address you provided in your profile settings.') }}
                     </div>
                 @endif
@@ -18,30 +19,28 @@
                         @csrf
 
                         <div>
-                            <x-jet-button type="submit">
-                                {{ __('Resend Verification Email') }}
-                            </x-jet-button>
+                            <button class="btn btn-success" type="submit">
+                                {{ __('Verstuur verificatie e-mail nogmaals') }}
+                            </button>
                         </div>
                     </form>
 
                     <div>
                         <a
                             href="{{ route('profile.show') }}"
-                            class="underline text-sm text-gray-600 hover:text-gray-900"
                         >
-                            {{ __('Edit Profile') }}</a>
+                            {{ __('Bewerk profiel') }}</a>
 
                         <form method="POST" action="{{ route('logout') }}" class="inline">
                             @csrf
 
                             <button type="submit" class="underline text-sm text-gray-600 hover:text-gray-900 ml-2">
-                                {{ __('Log Out') }}
+                                {{ __('Log uit') }}
                             </button>
                         </form>
                     </div>
                 </div>
             </div>
-
-
-        </x-jet-authentication-card>
+        </div>
+    </x-auther>
 </x-layout-default>
