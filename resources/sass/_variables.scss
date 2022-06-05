@@ -1,0 +1,52 @@
+@import "~bootstrap/scss/functions";
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+$enable-negative-margins: true;
+$enable-rounded: false;
+
+$verdana: 'Arimo', sans-serif;
+$font-family-base: $verdana;
+
+$brand-blue: #00A8c1;
+$brand-purple: #FF0090;
+$brand-darkgray: #707070;
+$brand-lightgray: #D1D1D1;
+$brand-white: #FFFFFF;
+$brand-black: #000000;
+
+
+$theme-colors: (
+    "brand-blue": $brand-blue,
+    "brand-purple": $brand-purple,
+    "brand-darkgray": $brand-darkgray,
+    "brand-lightgray": $brand-lightgray,
+    "brand-white" : $brand-white,
+);
+$utilities: (
+    "bg-opacity": (
+        css-var: true,
+        class: bg-opacity,
+        values: (
+            10: .1,
+            25: .25,
+            50: .5,
+            60: .6,
+            75: .75,
+            100: 1
+        )
+    )
+);
+
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 3,
+    6: $spacer * 4,
+    7: $spacer * 6,
+    8: $spacer * 11,
+);
