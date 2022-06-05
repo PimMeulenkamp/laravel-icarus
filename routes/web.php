@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccountController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+$userRole = \App\Models\Role::$ROLE_USER;
 
 Route::get('/', function () {
     return view('home');
@@ -25,4 +27,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::middleware(['auth',"checkUser:$userRole"])->group(function (){
+    Route::get('/account', [AccountController::class, 'index'])->name('account.index');
 });

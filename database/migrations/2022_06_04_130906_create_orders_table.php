@@ -16,11 +16,16 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
 
-            $table->uuid();
             $table->unsignedBigInteger('price');
+            $table->string('street');
+            $table->string('street_number');
+            $table->string('zipcode');
+            $table->string('city');
+
             $table->timestamps();
 
-            $table->foreignId('bundle_id');
+            $table->foreignId('order_status_id');
+            $table->foreignId('user_id');
         });
     }
 

@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
     <!-- Scripts -->
+    <script src="https://kit.fontawesome.com/36c6e9b4d7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <main>
