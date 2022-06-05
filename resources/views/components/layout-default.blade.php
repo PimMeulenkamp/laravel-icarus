@@ -16,10 +16,11 @@
     <!-- Scripts -->
 </head>
 <body>
-<x-navbar></x-navbar>
-<div class="font-sans text-gray-900 antialiased">
+<main>
+    <x-navbar></x-navbar>
     {{ $slot }}
-</div>
+</main>
+<h1>Footer</h1>
 
 <script src="{{ mix('js/app.js') }}" defer></script>
 </body>
