@@ -25,6 +25,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->string('mobile');
+            $table->foreignId('role_id');
         });
     }
 

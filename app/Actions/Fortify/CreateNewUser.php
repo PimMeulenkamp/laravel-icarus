@@ -2,6 +2,7 @@
 
 namespace App\Actions\Fortify;
 
+use App\Models\Role;
 use App\Models\User;
 use App\Models\UserAddress;
 use Illuminate\Support\Facades\Hash;
@@ -39,6 +40,7 @@ class CreateNewUser implements CreatesNewUsers
             }, explode(' ', $input['name']))),
             'email' => strtolower($input['email']),
             'password' => Hash::make($input['password']),
+            'role_id' => Role::$ROLE_USER
         ]);
 
         UserAddress::create([
