@@ -3,6 +3,7 @@
 @import "card";
 @import "form";
 @import "footer";
+@import "nav";
 @import '~bootstrap';
 
 //I hate non sticky footers
@@ -11,6 +12,7 @@ main {
     display: flex;
     flex-direction: column;
     min-height: calc(100vh - 100px);
+    background-image: url("/img/pattern.svg");
 }
 
 //Minheigt

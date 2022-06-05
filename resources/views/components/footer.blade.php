@@ -1,4 +1,4 @@
-<div class="bg-brand-darkgray">
+<div class="bg-brand-blue">
     <div class="pt-5 pb-3">
         <div class="container text-white mb-4">
             <div class="row">
