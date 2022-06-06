@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    @livewireStyles
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/36c6e9b4d7.js" crossorigin="anonymous"></script>
@@ -24,5 +25,6 @@
 <x-footer></x-footer>
 
 <script src="{{ mix('js/app.js') }}" defer></script>
+@livewireScripts
 </body>
 </html>
