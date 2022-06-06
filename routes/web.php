@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\Account\OrderController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,4 +32,6 @@ Route::middleware([
 
 Route::middleware(['auth',"checkUser:$userRole"])->group(function (){
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
+    Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+    Route::get('/order/details', [OrderController::class, 'details'])->name('order.details');
 });
