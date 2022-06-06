@@ -10,7 +10,7 @@ return new class extends Migration {
         Schema::create('cart_items', function (Blueprint $table) {
             $table->id();
 
-            $table->foreignId('cart_id');
+            $table->foreignId('shopping_session_id');
             $table->foreignId('product_id');
             $table->unsignedBigInteger('quantity');
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 $userRole = \App\Models\Role::$ROLE_USER;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/',[HomeController::class, 'index'])->name('home');
 
 Route::middleware([
     'auth:sanctum',

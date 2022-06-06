@@ -35,7 +35,7 @@
                             </li>
                         </ul>
                     </li>
-
+                    @livewire('shopping-cart')
                 @else
                     <li class="nav-item {{ request()->path() == "login" ? 'active' : '' }}">
                         <a class="nav-link" href="{{ route('login') }}">Login</a>

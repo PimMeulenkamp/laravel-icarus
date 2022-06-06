@@ -18,4 +18,7 @@
             </div>
         </div>
     </div>
+    @foreach($products as $product)
+        @livewire('product', ['product' => $product])
+    @endforeach
 </x-layout-default>
