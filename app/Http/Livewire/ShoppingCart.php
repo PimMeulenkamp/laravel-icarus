@@ -16,7 +16,7 @@ class ShoppingCart extends Component
             $items = $shoppingSession->items;
         }
         return view('livewire.shopping-cart', [
-            'itemsCount' => count($items),
+            'itemsCount' => count($items ?? []),
             'items' => $items
         ]);
     }
