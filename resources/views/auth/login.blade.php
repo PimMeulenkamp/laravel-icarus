@@ -1,12 +1,12 @@
 <x-layout-default>
     <x-auther>
+        <x-auth-error class="my-3"/>
         <div class="card">
             <h4 class="card-header">
                 Login
             </h4>
 
             <div class="card-body">
-                <x-jet-validation-errors class="mb-4"/>
 
 
                 @if (session('status'))

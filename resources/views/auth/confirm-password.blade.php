@@ -1,5 +1,6 @@
 <x-layout-default>
     <x-auther>
+        <x-auth-error class="my-3"/>
         <div class="card">
             <div class="mb-4 alert alert-info">
                 {{ __('Voor dat je verder gaat moet je eerst je wachtwoord opnieuw invullen') }}
@@ -8,7 +9,6 @@
                 Bevestig wachtwoord
             </h4>
 
-            <x-jet-validation-errors class="mb-4"/>
             <div class="card-body">
                 <form method="POST" action="{{ route('password.confirm') }}">
                     @csrf

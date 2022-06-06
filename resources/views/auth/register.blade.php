@@ -1,11 +1,11 @@
 <x-layout-default>
     <x-auther>
-        <div class="card">
+        <x-auth-error class="my-3"/>
+        <div class="card mt-3">
             <h4 class="card-header">
                 Maak een account aan.
             </h4>
             <div class="card-body">
-                <x-jet-validation-errors class="mb-4"/>
 
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
@@ -24,6 +24,35 @@
                                    required autofocus autocomplete="surname"/>
                         </div>
                     </div>
+                    {{--                    <div class="row mt-3">--}}
+                    {{--                        <div class="col-md-7 col-lg-3">--}}
+                    {{--                            <label for="zipcode" class="form-label">{{ __('Postcode') }}</label>--}}
+                    {{--                            <input id="zipcde" class="form-control" type="text" name="name" :value="old('zipcode')"--}}
+                    {{--                                   required autofocus autocomplete="zipcode"/>--}}
+                    {{--                        </div>--}}
+                    {{--                        <div class="col-md-5 col-lg-2 mt-3 mt-md-0">--}}
+                    {{--                            <label for="street_number" class="form-label">{{ __('Huisnr.') }}</label>--}}
+                    {{--                            <input id="street_number" class="form-control" type="text" name="name" :value="old('street_number')"--}}
+                    {{--                                      required autofocus autocomplete="street_number"/>--}}
+                    {{--                        </div>--}}
+                    {{--                        <div class=" col-lg-7 mt-3 mt-lg-0">--}}
+                    {{--                            <label for="street_name" class="form-label">{{ __('Straatnaam') }}</label>--}}
+                    {{--                            <input id="street_name" class="form-control" type="text" name="name" :value="old('street_name')"--}}
+                    {{--                                        required autofocus autocomplete="street_name"/>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
+                    {{--                    <div class="row mt-3">--}}
+                    {{--                        <div class="col-md-5">--}}
+                    {{--                            <label for="city" class="form-label">{{ __('Stad') }}</label>--}}
+                    {{--                            <input id="city" class="form-control" type="text" name="name" :value="old('city')"--}}
+                    {{--                                   required autofocus autocomplete="city"/>--}}
+                    {{--                        </div>--}}
+                    {{--                        <div class="col-md-7 mt-3 mt-md-0">--}}
+                    {{--                            <label for="phone" class="form-label">{{ __('Mobiele nummer') }}</label>--}}
+                    {{--                            <input id="phone" class="form-control" type="text" name="name" :value="old('phone')"--}}
+                    {{--                                   required autofocus autocomplete="phone"/>--}}
+                    {{--                        </div>--}}
+                    {{--                    </div>--}}
 
                     <h5 class="mt-4">Account Gegevens</h5>
                     <hr>

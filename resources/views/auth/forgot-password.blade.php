@@ -1,5 +1,6 @@
 <x-layout-default>
     <x-auther>
+        <x-auth-error class="my-3"/>
         <div class="card">
             @if (session('status'))
                 <div class="mb-4 font-medium text-sm text-green-600">
@@ -16,7 +17,6 @@
                     {{ __('Wachtwoord vergeten? Geen probleem. Vul uw E-mail in en wij sturen je een mail met een link om een nieuw wachtwoord aan te maken.') }}
                 </p>
 
-                <x-jet-validation-errors class="mb-4"/>
 
                 <form method="POST" action="{{ route('password.email') }}">
                     @csrf

@@ -1,13 +1,12 @@
 <x-layout-default>
     <x-auther>
+        <x-auth-error class="my-3"/>
         <div class="card">
             <h4 class="card-header">
                 Maak een account
             </h4>
 
             <div class="card-body">
-                <x-jet-validation-errors class="mb-4"/>
-
                 <form method="POST" action="{{ route('password.update') }}">
                     @csrf
 

@@ -4,6 +4,7 @@
 @import "form";
 @import "footer";
 @import "nav";
+@import "btn";
 @import '~bootstrap';
 
 //I hate non sticky footers
@@ -13,9 +14,21 @@ main {
     flex-direction: column;
     min-height: calc(100vh - 100px);
     background-image: url("/img/pattern.svg");
+    padding-bottom: map-get($spacers, 5);
 }
 
 //Minheigt
 .mh-75 {
     min-height: 75vh;
+}
+
+.back {
+    color: $brand-dark-blue;
+    text-decoration: none;
+    font-weight: 600;
+
+    &:hover {
+        color: $black;
+        text-decoration: none;
+    }
 }

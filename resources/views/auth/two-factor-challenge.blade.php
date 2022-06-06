@@ -1,5 +1,6 @@
 <x-layout-default>
     <x-auther>
+        <x-auth-error class="my-3"/>
         <div class="card">
             <h4 class="card-header">
                 Maak MFA aan
@@ -14,9 +15,6 @@
                     <div class="mb-4 text-sm text-gray-600" x-show="recovery">
                         {{ __('Please confirm access to your account by entering one of your emergency recovery codes.') }}
                     </div>
-
-                    <x-jet-validation-errors class="mb-4"/>
-
                     <form method="POST" action="{{ route('two-factor.login') }}">
                         @csrf
 

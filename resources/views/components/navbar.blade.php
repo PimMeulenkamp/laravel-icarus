@@ -11,7 +11,6 @@
                     <a class="nav-link" href="/">Home</a>
                 </li>
 
-
                 @if(auth()->check())
                     <li class="nav-item dropdown">
 
@@ -20,16 +19,19 @@
                             Account
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="account">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
+                            <li><a class="dropdown-item" href="{{ route('account.index') }}"><i
+                                        class="fa-solid fa-user me-2"></i>Account</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                    {{ __('Log uit') }}
-                                </a>
+                                <form method="POST" action="{{ route('logout') }}" class="">
+                                    @csrf
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();this.closest('form').submit();">
+                                        <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>{{ 'Uitloggen' }}
+                                    </a>
+                                </form>
                             </li>
                         </ul>
                     </li>

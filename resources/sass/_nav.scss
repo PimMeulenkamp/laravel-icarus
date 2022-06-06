@@ -14,7 +14,12 @@
             &::before {
                 width: 78%;
             }
+
+            .dropdown-toggle::before {
+                width: 88%;
+            }
         }
+
     }
 
     //just a nav item
@@ -38,10 +43,21 @@
             transition: width .2s ease-in-out;
         }
 
-        &:hover {
-            &::before {
-                width: 78%;
-            }
+        &:hover::before {
+            width: 78%;
         }
+
+        &.dropdown-toggle:hover::before {
+            width: 88%;
+        }
+    }
+}
+
+
+.account-menu {
+    .ac-item {
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
     }
 }

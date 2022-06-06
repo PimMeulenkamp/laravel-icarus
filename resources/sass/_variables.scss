@@ -1,14 +1,14 @@
 @import "~bootstrap/scss/variables";
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+@import "typography";
 
 $enable-negative-margins: true;
-$enable-rounded: false;
+$enable-rounded: true;
 
-$verdana: 'Arimo', sans-serif;
-$font-family-base: $verdana;
+$font-family-base: $nunito;
 
 
 $brand-blue: #0a439a;
+$brand-dark-blue: darken($brand-blue, 18%);
 $brand-yellow: #fff000;
 $brand-darkgray: #707070;
 $brand-lightgray: #D1D1D1;
@@ -22,6 +22,7 @@ $secondary: darken($brand-yellow, 10%);
 
 $custom-theme-colors: (
     "brand-blue": $brand-blue,
+    "brand-dark-blue": $brand-dark-blue,
     "brand-yellow": $brand-yellow,
     "brand-darkgray": $brand-darkgray,
     "brand-lightgray": $brand-lightgray,
