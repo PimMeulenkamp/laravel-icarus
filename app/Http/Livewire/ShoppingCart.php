@@ -13,7 +13,7 @@ class ShoppingCart extends Component
         $shoppingSession = auth()->user()->shoppingSession;
         $items = [];
         if ($shoppingSession) {
-            $items = $shoppingSession->items;
+            $items = $shoppingSession->cartItems;
         }
         return view('livewire.shopping-cart', [
             'itemsCount' => count($items ?? []),

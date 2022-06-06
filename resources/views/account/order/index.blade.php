@@ -3,14 +3,20 @@
         <a href="{{url()->previous()}}" class="d-flex back flex-row align-items-center mb-1">
             <i class="fa-solid fa-chevron-left"></i><span class="ms-2">{{ 'Terug' }}</span>
         </a>
-        <div class="row mb-3">
-            <div class="col-md-3">
-                <h2 class="fw-bold">{{ 'Mijn Account' }}</h2>
-            </div>
-            <div class="col-md-9">
-                <h2 class="ms-n2 fw-bold">{{ 'Bestellingen' }}</h2>
-            </div>
+        <div class="bg-white rounded shadow-lg my-4 p-4 me-n2">
+            <h1 class="fw-bold">Mijn account</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad alias aliquam aliquid assumenda, commodi
+                enim esse eum ex maxime nesciunt odio, perferendis quae qui recusandae soluta ullam unde voluptatem.
+                Odit?</p>
         </div>
+        {{--        <div class="row mb-3">--}}
+        {{--            <div class="col-md-3">--}}
+        {{--                <h2 class="fw-bold">{{ 'Mijn Account' }}</h2>--}}
+        {{--            </div>--}}
+        {{--            <div class="col-md-9">--}}
+        {{--                <h2 class="ms-n2 fw-bold">{{ 'Bestellingen' }}</h2>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
 
         <div class="row">
             <div class="col-md-3">
