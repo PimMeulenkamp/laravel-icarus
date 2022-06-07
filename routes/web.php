@@ -35,6 +35,11 @@ Route::middleware([
 Route::middleware(['auth',"checkUser:$userRole"])->group(function (){
     Route::get('/account', [AccountController::class, 'index'])->name('account.index');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
-    Route::get('/order/details', [OrderController::class, 'details'])->name('order.details');
+    Route::get('/orders/details', [OrderController::class, 'create'])->name('order.details');
+    Route::get('/orders', function() {
+        return redirect()->route('cart.index');
+    });
+    Route::get('/orders/{order}', [OrderController::class, 'show'])->name('order.show');
+    Route::post('/orders', [OrderController::class, 'store'])->name('order.store');
 });
 

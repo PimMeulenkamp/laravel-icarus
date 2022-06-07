@@ -10,18 +10,18 @@ class OrderStatusSeeder extends Seeder
     public function run()
     {
         OrderStatus::create([
-            'id' => 1,
+            'id' => OrderStatus::$PAYED,
             'name' => 'Betaald',
         ]);
         OrderStatus::create([
-            'id' => 2,
+            'id' => OrderStatus::$PROCESSING,
             'name' => 'Bezig met verwerken',
         ]);
         OrderStatus::create([
-            'id' => 3,
+            'id' => OrderStatus::$WAITING_FOR_PAYMENT,
             'name' => 'Wachten voor betaling',
         ]);OrderStatus::create([
-            'id' => 4,
+            'id' => OrderStatus::$DELIVERED,
             'name' => 'Bezorged',
         ]);
     }
