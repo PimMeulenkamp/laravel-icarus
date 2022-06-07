@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Account\OrderController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 $userRole = \App\Models\Role::$ROLE_USER;
 
 Route::get('/',[HomeController::class, 'index'])->name('home');
+Route::get('/products',[ProductsController::class, 'index'])->name('products');
 
 Route::middleware([
     'auth:sanctum',
@@ -35,3 +37,4 @@ Route::middleware(['auth',"checkUser:$userRole"])->group(function (){
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
     Route::get('/order/details', [OrderController::class, 'details'])->name('order.details');
 });
+
