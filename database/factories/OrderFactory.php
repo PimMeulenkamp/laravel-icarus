@@ -14,7 +14,6 @@ class OrderFactory extends Factory
     public function definition(): array
     {
         return [
-            'price' => $this->faker->randomNumber(),
             'street' => $this->faker->streetName(),
             'street_number' => (string) $this->faker->randomNumber(),
             'zipcode' => $this->faker->word(),

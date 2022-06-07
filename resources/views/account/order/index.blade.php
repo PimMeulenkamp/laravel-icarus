@@ -42,7 +42,7 @@
                         </div>
                         <div class="d-flex align-items-end">
                             <a class="d-inline-block text-white btn btn-lg btn-shadow btn-brand-blue"
-                               href="">{{ 'Bekijk details' }}</a>
+                               href="{{route('order.show',['order' => $order->id])}}">{{ 'Bekijk details' }}</a>
                         </div>
                     </div>
                     <hr>

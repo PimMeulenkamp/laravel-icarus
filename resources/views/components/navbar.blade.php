@@ -36,7 +36,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">
+                        <a href="{{route('cart.index')}}" class="nav-link">
                             @livewire('shopping-cart')
                         </a>
                     </li>

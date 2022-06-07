@@ -6,7 +6,10 @@ class CartController extends Controller
 {
     public function index()
     {
-        $items = auth()->user()->shoppingSession->cartItems;
+        $items = [];
+       if(auth()->user()->shoppingSession != null){
+            $items = auth()->user()->shoppingSession->cartItems;
+       }
 
         return view('account.cart.index',[
             'items' => $items

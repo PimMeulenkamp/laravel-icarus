@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('price');
             $table->string('street');
             $table->string('street_number');
             $table->string('zipcode');
