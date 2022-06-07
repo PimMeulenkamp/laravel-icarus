@@ -1,9 +1,14 @@
 @import "variables";
 @import "typography";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
 
 .navbar-brand {
     font-family: $lato;
-    font-size: 1.2rem;
+    font-size: 1rem !important;
+    @media (min-width: 768px) {
+        font-size: 1.25rem !important;
+    }
 }
 
 .nav-item {
@@ -13,10 +18,20 @@
         .nav-link {
             &::before {
                 width: 78%;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
             }
 
             .dropdown-toggle::before {
                 width: 88%;
+                @include media-breakpoint-down(md) {
+                    width: 100%;
+                }
+            }
+
+            @include media-breakpoint-down(md) {
+                display: inline-block;
             }
         }
 
@@ -45,10 +60,16 @@
 
         &:hover::before {
             width: 78%;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
         }
 
         &.dropdown-toggle:hover::before {
             width: 88%;
+            @include media-breakpoint-down(md) {
+                width: 100%;
+            }
         }
     }
 }

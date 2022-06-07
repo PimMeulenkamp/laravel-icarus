@@ -78,5 +78,6 @@ $card-color: $black;
 $card-bg: #f3f3f3;
 
 //text settings
-$link-color: darken($brand-blue, 10%)
-
+$link-color: darken($brand-blue, 10%);
+$list-group-active-bg: lighten($brand-blue, 10%);
+$list-group-active-border-color: lighten($brand-blue, 10%);

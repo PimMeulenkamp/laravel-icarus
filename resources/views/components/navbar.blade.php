@@ -1,14 +1,24 @@
-<nav class="navbar navbar-expand-lg bg-light">
+<nav class="navbar navbar-expand-lg bg-light justify-content-lg-start">
     <div class="container">
-        <a class="navbar-brand" href="/">Krentenbollenactie.nl</a>
+        <a class="navbar-brand flex-grow-1" href="/">Krentenbollenactie.nl</a>
+        @auth()
+            <div class="d-lg-none m2-sm-2">
+                <a href="{{route('cart.index')}}" class="nav-link text-brand-blue">
+                    @livewire('shopping-cart')
+                </a>
+            </div>
+        @endauth
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars-staggered text-brand-blue"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                 <li class="nav-item {{ request()->path() == "/" ? 'active' : '' }}">
                     <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item {{ request()->path() == "products" ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('products') }}">actie producten</a>
                 </li>
 
                 @if(auth()->check())
@@ -35,7 +45,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item d-none d-lg-block">
                         <a href="{{route('cart.index')}}" class="nav-link">
                             @livewire('shopping-cart')
                         </a>
