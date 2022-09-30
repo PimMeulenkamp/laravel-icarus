@@ -3,6 +3,7 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\ShoppingSession;
 
 class ContinueOrder extends Component
 {
@@ -11,6 +12,12 @@ class ContinueOrder extends Component
     public function render()
     {
         $shoppingSession = auth()->user()->shoppingSession;
+        if ($shoppingSession == null) {
+            $shoppingSession = ShoppingSession::create([
+                'user_id' => auth()->user()->id
+            ]);
+        }
+
         $products = $shoppingSession->cartItems->map(function ($item) {
             return $item->product;
         });

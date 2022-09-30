@@ -8,6 +8,10 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class ShoppingSession extends Model
 {
+    protected $fillable = [
+        'user_id'
+    ];
+
     public function cartItems(): HasMany
     {
         return $this->hasMany(CartItem::class);
